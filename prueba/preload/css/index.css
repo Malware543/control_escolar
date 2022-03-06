@@ -1,296 +1,212 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
-
-#preloader{
+.preload{
     position: absolute;
     z-index: 200;
     width: 100%;
     height: 100vh;
 }
 
-body {
-    background: url(https://www.xtrafondos.com/wallpapers/ubuntu-15-vivid-vervet-greyscale-3442.jpg);
+body{
+    background-image: url(../img/fondo.webp);
     background-size: 100% ;
     background-attachment: fixed;
-    max-width: auto !important;
-    max-height: auto !important;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    /*
-    width: 1400px;
-    height: 500;
-    margin: 0 auto;
-    margin:0;
-    padding:0;*/
-  }
-   
-/*body{
-    background-size: 100%;
-    background-attachment: fixed;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
-.contenedorFondo{
-    max-width: 900px;
-    max-height: 400px;
     overflow: hidden;
 }
 
-.contenedorFondo .circuloA1{
+.preload .imagenes{
     position: absolute;
-    height:500px;
-    width: 500px;
-    left: -200px;
-    top: -200px;
-    animation: rotacion 2.5s linear infinite 0.5s alternate, aparicion 1.5s linear;
-    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
-    
-}
-.contenedorFondo .circuloA1 img{
-    height: 100%;
+    z-index: 201;
     width: 100%;
-    object-fit: contain;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    animation: aparicion 2.5s linear;
+    animation: aparicion 2.5s linear;
 }
 
-.contenedorFondo .circuloB1{
-    position: absolute;
-    height: 500px;
-    width: 500px;
-    top:450px;
-    left: 1100px;
-    animation: rotacion 2.5s linear infinite 0.5s alternate, aparicion 1.5s linear;
-    background-blend-mode: darken;
-    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
+.preload .imagenes .lobo{
+    animation: respiracion 1s linear infinite 0.2s alternate;
 }
 
-.contenedorFondo .circuloB1 img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.contenedorFondo .lineaA1{
-    position: absolute;
-    transform: rotate(45deg);
-    width: 80px;
-    height: auto;
-    left: 370px;
-    top: 350px;
-    animation: aparicion 1.5s linear;
-    background-blend-mode: darken;
-    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.contenedorFondo .lineaA1 img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-.contenedorFondo .lineaA2{
-    position: absolute;
-    transform: rotate(45deg);
-    width: 80px;
-    height: auto;
-    left: 210px;
-    top: 490px;
-    animation: aparicion 1.5s linear;
-    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.contenedorFondo .lineaA2 img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-.contenedorFondo .lineaA3{
-    position: absolute;
-    transform: rotate(45deg);
-    width: 100px;
-    height: auto;
-    left: 120px;
-    top: 400px;
-    animation: aparicion 1.5s linear;
-    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.contenedorFondo .lineaA3 img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.contenedorFondo .lineaB1{
-    position: absolute;
-    transform: rotate(45deg);
-    width: 80px;
-    height: auto;
-    right: 350px;
-    top: -220px;
-    animation: aparicion 1.5s linear;
-    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.contenedorFondo .lineaB1 img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-.contenedorFondo .lineaB2{
-    position: absolute;
-    transform: rotate(45deg);
-    width: 80px;
-    height: auto;
-    right: 220px;
-    top: -120px;
-    animation: aparicion 1.5s linear;
-    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.contenedorFondo .lineaB2 img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-.contenedorFondo .lineaB3{
-    position: absolute;
-    transform: rotate(45deg);
-    width: 100px;
-    height: auto;
-    right: 130px;
-    top: -100px;
-    animation: aparicion 1.5s linear;
-    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.contenedorFondo .lineaB3 img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.contenedorFondo .lobo{
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    left: 300px;
-    top: 120px;
-    animation: respira 1s linear infinite 0.2s alternate, aparicion 1.5s linear;
-    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
-    
-}
-
-.contenedorFondo .lobo img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
-.lobo::before{
+.preload .imagenes h1{
     position: relative;
-    width: 20%;
-    height: 20%;
-    left: 0;
-    top: -50%;
-}
-.lobo::after{
-    position: relative;
-    width: 20%;
-    height: 20%;
-    top: 0;
-    right: -50%;
-}
-.titulo{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    position: absolute;
-    left: 650px;
-    top: 290px;
-    border-color: black;
-    border-radius: 30px;
-    padding:10px;
-    filter: drop-shadow(15px 10px 7px rgba(0, 0, 0, 1));
-    /*box-shadow: 10px 10px 5px 5px rgb(66, 66, 66);*/
-    animation: aparicion 1.5s linear;
+    font-size: 30px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    margin-left: 30px;
+    bottom:100px;
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
-.contenedorFondo .movil{
-    display: none;
-}
-/*
-.titulo:hover{
-    background-color: rgba(54, 54, 54, 0.726);
-    color: white;
+
+/*.preload .imagenes .lineaHorizontal{
+    width: 3px;
+    height: 120px;
+    margin-left: 10px;
+    background-color: black;
+    border-radius: 10px;
 }*/
-@keyframes respira {
-    0%{
-        transform:  scale(1);
-    }
-    90%{
-        transform:  scale(1.1);
-    }
-    100%{
-        transform:  scale(1.12);
-    }
+.preload .imagenes .lineaVertical{
+    position: absolute;
+    width: 3px;
+    height: 320px;
+    margin-left: 10px;
+    background-color: black;
+    border-radius: 10px;
+    bottom:300px;
+    right:640px;
+    transform: rotate(90deg);
 }
-@keyframes rotacion {
-    0%{
-        transform: rotate(20deg);
-    }
-    10%{
-        transform: rotate(40deg);
-    }
-    20%{
-        transform: rotate(80deg);
-    }
-    30%{
-        transform: rotate(120deg);
-    }
-    40%{
-        transform: rotate(160deg);
-    }
-    50%{
-        transform: rotate(200deg);
-    }
-    60%{
-        transform: rotate(220deg);
-    }
-    70%{
-        transform: rotate(240deg);
-    }
-    80%{
-        transform: rotate(260deg);
-    }
-    90%{
-        transform: rotate(280deg);
-    }
-    100%{
-        transform: rotate(300deg);
-    }
+
+.preload .imagenes .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
-@keyframes aparicion {
-    0%{
-        opacity: -0.1;
-        filter: alpha(opacity=-1);
-    }
-    10%{
-        opacity: -0.2;
-        filter: alpha(opacity=-20);
-    }
-    20%{
-        opacity: -0.4;
-        filter: alpha(opacity=-40);
-    }
-    40%{
-        opacity: -0.6;
-        filter: alpha(opacity=-60);
-    }
-    80%{
-        opacity: 0.8;
-        filter: alpha(opacity=80);
-    }
-    100%{
-        opacity: 1;
-        filter: alpha(opacity=100);
+
+.preload .imagenes .logo{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: 50px;
+    right: 260px;
+}
+
+.preload .circulo1{
+    position: absolute;
+    z-index: 202;
+    width: 500px;
+    height: 500px;
+    top: -200px;
+    left: -190px;   
+    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
+    animation: rotacion 2.5s linear infinite,aparicion 2.5s linear;
+}
+
+.preload .circulo2{
+    position: absolute;
+    z-index: 203;
+    width: 500px;
+    height: 500px;
+    bottom: -200px;
+    right: -190px; 
+    filter: drop-shadow(20px 10px 4px rgba(0, 0, 0, 0.25));
+    animation: rotacion 2.5s linear infinite,aparicion 2.5s linear;
+}
+
+.preload .linea1{
+    position: absolute;
+    z-index: 204;
+    width: 20px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: rgb(197, 14, 14);
+    top: 450px;
+    left: 60px;
+    transform: rotate(50deg);
+    box-shadow: 15px 5px 10px rgba(0,0,0,0.5);
+    animation: aparicion 2.5s linear;
+}
+
+.preload .linea2{
+    position: absolute;
+    z-index: 205;
+    width: 20px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: rgb(7, 7, 190);
+    left: 100px;
+    top: 460px;
+    transform: rotate(50deg);
+    box-shadow: 15px 5px 10px rgba(0,0,0,0.5);
+    animation: aparicion 2.5s linear;
+}
+
+.preload .linea3{
+    position: absolute;
+    z-index: 206;
+    width: 20px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: rgb(7, 7, 190);
+    top: 460px;
+    left: 250px;
+    transform: rotate(50deg);
+    box-shadow: 15px 5px 10px rgba(0,0,0,0.5);
+    animation: aparicion 2.5s linear;
+}
+
+.preload .linea4{
+    position: absolute;
+    z-index: 207;
+    width: 20px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: rgb(7, 7, 190);
+    right: 120px;
+    bottom: 410px;
+    transform: rotate(50deg);
+    box-shadow: 15px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: aparicion 2.5s linear;
+}
+
+.preload .linea5{
+    position: absolute;
+    z-index: 208;
+    width: 20px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: rgb(197, 14, 14);
+    bottom: 550px;
+    right: 160px;
+    transform: rotate(50deg);
+    box-shadow: 15px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: aparicion 2.5s linear;
+}
+
+.preload .linea6{
+    position: absolute;
+    z-index: 209;
+    width: 20px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: rgb(7, 7, 190);
+    right: 260px;
+    bottom: 530px;
+    transform: rotate(50deg);
+    box-shadow: 15px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: aparicion 2.5s linear;
+}
+
+@keyframes rotacion{
+    from{
+        transform: rotate(0deg);
+    } to{
+        transform: rotate(360deg);
     }
 }
 
+@keyframes respiracion{
+    from{
+        transform: scale(1);
+    } to{
+        transform: scale(1.12);
+    }
+}
+
+@keyframes aparicion{
+    from{
+        opacity: -0.1;
+        filter:alpha(opacity=-60);
+    } to{
+        opacity: 1;
+        filter:alpha(opacity=100);
+    }
+}
